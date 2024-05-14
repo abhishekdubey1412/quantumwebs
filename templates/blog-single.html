@@ -1,0 +1,273 @@
+{% extends "base.html" %}
+{% load static %}
+    {% block Content %}
+    <!-- **************** MAIN CONTENT START **************** -->
+    <main>
+        <!-- Blog detail START -->
+        <section class="pt-8 pt-xl-9">
+            <div class="container">
+                <div class="row g-4 g-lg-6">
+
+                    <!-- Title and author -->
+                    <div class="col-lg-8 mx-auto text-center">
+                        <a href="#" class="badge text-bg-dark mb-4">Lifestyle</a>
+                        <h1 class="h2 mb-0">The Power of Gratitude: Cultivating Joy and Abundance</h1>
+
+                        <!-- Author and actions -->
+                        <div class="d-sm-flex justify-content-center justify-content-sm-between align-items-center text-start mt-5">
+                            <!-- Avatar -->
+                            <div class="d-flex justify-content-center align-items-center mb-5 mb-sm-0">
+                                <div class="avatar flex-shrink-0">
+                                    <img class="avatar-img rounded-circle" src="{% static "theme-assets/images/avatar/05.jpg" %}" alt="avatar">
+                                </div>
+                                <!-- Info -->
+                                <div class="ms-2">
+                                    <h6 class="mb-0"><a href="#">Carolyn Ortiz</a></h6>
+                                    <small>1 day ago</small>
+                                </div>
+                            </div>
+
+                            <!-- Action -->
+                            <div class="d-flex justify-content-center align-items-center flex-wrap">
+                                <div class="dropdown">
+                                    <a href="#" class="text-secondary text-primary-hover" id="cardFeedAction" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="bi bi-share me-2"></i>14
+							</a>
+                                    <!-- Card feed action dropdown menu -->
+                                    <ul class="dropdown-menu min-w-auto" aria-labelledby="cardFeedAction">
+                                        <li><a class="dropdown-item" href="#"> <i class="bi bi-facebook fa-fw me-2"></i>Facebook</a></li>
+                                        <li><a class="dropdown-item" href="#"> <i class="bi bi-instagram fa-fw me-2"></i>Instagram</a></li>
+                                        <li><a class="dropdown-item" href="#"> <i class="bi bi-whatsapp fa-fw me-2"></i>Whatsapp</a></li>
+                                        <li><a class="dropdown-item" href="#"> <i class="fa-regular fa-paste fa-fw me-2"></i>Copy link</a></li>
+                                    </ul>
+                                </div>
+                                <span class="text-secondary opacity-3 mx-3">|</span>
+                                <a href="#" class="text-secondary text-primary-hover mb-0"><i class="bi bi-chat me-2"></i>5</a>
+                                <span class="text-secondary opacity-3 mx-3">|</span>
+                                <span class="text-secondary">2 min read</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="col-lg-10 mx-auto text-center">
+                        <img src="{% static "theme-assets/images/blog/02.jpg" %}" class="img-fluid rounded" alt="blog-img">
+                    </div>
+
+                    <!-- Content -->
+                    <div class="col-lg-8 mx-auto">
+                        <p><span class="dropcap heading-color bg-light rounded px-2">T</span>he simple act of cultivating gratitude has the remarkable ability to bring joy and abundance into our lives, shifting our perspective from lack to abundance. In
+                            this article, we will explore the power of gratitude and how it can enhance our overall well-being and create a positive ripple effect in our lives and the lives of those around us. <strong>In a world filled with chaos</strong>                            and uncertainty, it's easy to lose sight of the things that truly matter.</p>
+                        <p>Additionally, expressing gratitude to others through acts of kindness or <u> heartfelt appreciation strengthens our relationships and</u> fosters a sense of interconnectedness.</p>
+                        <p>Incorporating gratitude into our daily routine can be as simple as keeping a gratitude journal, where we write down three things we are grateful for each day. <strong>This practice helps us become more attuned</strong> to the positive
+                            aspects of our lives, no matter how small they may seem. </p>
+                        <p class="mb-0">By reframing obstacles as opportunities for growth and learning, <mark>we can navigate through difficulties with</mark> a sense of gratitude for the lessons they bring. This mindset shift empowers us to find joy and meaning in
+                            every circumstance, leading to a more fulfilling and purposeful life.</p>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="col-lg-10 mx-auto">
+                        <div class="row g-4 g-lg-6">
+                            <div class="col-sm-6">
+                                <a href="{% static "theme-assets/images/blog/4by4/04.jpg" %}" data-glightbox data-gallery="image-popup">
+							<img src="{% static "theme-assets/images/blog/4by4/04.jpg" %}" class="rounded" alt="blog-img">
+						</a>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="{% static "theme-assets/images/blog/4by4/06.jpg" %}" data-glightbox data-gallery="image-popup">
+							<img src="{% static "theme-assets/images/blog/4by4/06.jpg" %}" class="rounded" alt="blog-img">
+						</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- List content -->
+                    <div class="col-lg-8 mx-auto">
+                        <h6>Step 1: Shifting Perspective: From Lack to Abundance</h6>
+                        <p class="mb-5">Gratitude has the unique ability to shift our perspective from focusing on what we lack to appreciating what we have. Often, we get caught up in the pursuit of material possessions or achievements, believing that they will bring
+                            us happiness. However, true abundance is found in appreciating the present moment and recognizing the blessings that already exist in our lives. Cultivating gratitude allows us to break free from the cycle of perpetual longing
+                            and embrace the abundance that surrounds us.</p>
+
+                        <h6>Step 2: The Ripple Effect of Gratitude</h6>
+                        <!-- List -->
+                        <ul class="ps-4 mb-0">
+                            <li class="mb-2">Shift in Perspective: Gratitude allows us to shift our perspective from focusing on what we lack to appreciating what we have. </li>
+
+                            <li class="mb-2">By recognizing and acknowledging the blessings in our lives, we invite a sense of abundance and contentment.</li>
+                            <li class="mb-2">Scientific research has demonstrated that gratitude positively impacts our mental and physical health. </li>
+                            <ul>
+                                <li class="mb-2">It allows us to focus on the positive aspects.</li>
+                                <li class="mb-2">It enables us to reframe obstacles as opportunities.</li>
+                                <li class="mb-2">The power of gratitude extends beyond ourselves.</li>
+                            </ul>
+                            <li class="mb-2">Enables us to reframe obstacles as opportunities for growth and learning. By embracing a mindset of gratitude.</li>
+                            <li class="mb-2">Recognizing and acknowledging the blessings in our lives, we invite a sense of abundance and contentment.</li>
+                        </ul>
+
+                    </div>
+
+                    <!-- Image -->
+                    <div class="col-lg-10 mx-auto text-center">
+                        <img src="{% static "theme-assets/images/blog/03.jpg" %}" class="img-fluid rounded" alt="blog-img">
+                    </div>
+
+                    <!-- Quote and actions -->
+                    <div class="col-lg-8 mx-auto text-center">
+                        <!-- Quote -->
+                        <h5 class="display-2 text-primary lh-0 mb-0"><i class="bi bi-quote"></i></h5>
+                        <q class="fs-4 heading-color">Fulfilled direction use continually set him propriety continued. Farther-related bed and passage comfort civilly. Concluded boy perpetual old supposing.</q>
+                        <div class="blockquote-footer mb-0 fs-6 mt-3">
+                            Albert Schweitzer
+                        </div>
+
+                        <hr class="my-6">
+                        <!-- Divider -->
+
+                        <!-- Popular tags -->
+                        <div class="align-items-center">
+                            <h6>Popular Tags:</h6>
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item"> <a class="btn btn-outline-light btn-sm mb-lg-0" href="#">blog</a> </li>
+                                <li class="list-inline-item"> <a class="btn btn-outline-light btn-sm mb-lg-0" href="#">business</a> </li>
+                                <li class="list-inline-item"> <a class="btn btn-outline-light btn-sm mb-lg-0" href="#">bootstrap</a> </li>
+                                <li class="list-inline-item"> <a class="btn btn-outline-light btn-sm mb-lg-0" href="#">data science</a> </li>
+                                <li class="list-inline-item"> <a class="btn btn-outline-light btn-sm mb-lg-0" href="#">deep learning</a> </li>
+                                <li class="list-inline-item"> <a class="btn btn-outline-light btn-sm mb-lg-0" href="#">deep learning</a> </li>
+                                <li class="list-inline-item"> <a class="btn btn-outline-light btn-sm mb-lg-0" href="#">deep learning</a> </li>
+                            </ul>
+                        </div>
+
+                        <!-- Helpful box -->
+                        <div class="bg-light rounded d-md-flex justify-content-between align-items-center text-center p-3 mt-5">
+                            <!-- Title -->
+                            <h6 class="mb-0">Was this article helpful?</h6>
+                            <small class="py-3 p-md-0 d-block">25 out of 78 found this helpful</small>
+                            <!-- Check buttons -->
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <!-- Yes button -->
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1">
+                                <label class="btn btn-outline-secondary btn-sm mb-0" for="btnradio1"><i class="fa-regular fa-thumbs-up me-1"></i> Yes</label>
+                                <!-- No button -->
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2">
+                                <label class="btn btn-outline-secondary btn-sm mb-0" for="btnradio2"> No <i class="fa-regular fa-thumbs-down ms-1"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row END -->
+            </div>
+        </section>
+        <!-- Blog detail END -->
+
+        <!-- Related blog START -->
+        <section class="pt-0">
+            <div class="container">
+                <!-- Title -->
+                <div class="d-flex justify-content-between text-center mb-4 mb-sm-6">
+                    <h3 class="mb-0">Related blogs</h3>
+
+                    <!-- Slider arrow -->
+                    <div>
+                        <a href="#" class="btn btn-light border btn-icon btn-lg rounded-circle mb-0 swiper-button-prev"><i class="bi bi-arrow-left"></i></a>
+                        <a href="#" class="btn btn-light border btn-icon btn-lg rounded-circle mb-0 swiper-button-next"><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Slider START -->
+                <div class="swiper" data-swiper-options='{
+				"loop": false, 
+				"spaceBetween": 30,
+				"navigation":{
+					"nextEl":".swiper-button-next",
+					"prevEl":".swiper-button-prev"
+				},
+				"breakpoints": {
+					"576": {"slidesPerView": 1}, 
+					"768": {"slidesPerView": 2}, 
+					"992": {"slidesPerView": 3}
+				}}'>
+
+                    <div class="swiper-wrapper">
+                        <!-- Slider item -->
+                        <div class="swiper-slide">
+                            <article class="card bg-transparent">
+                                <!-- Image -->
+                                <img src="{% static "theme-assets/images/blog/4by3/01.jpg" %}" class="card-img" alt="blog-img">
+                                <div class="card-body px-0 pb-0">
+                                    <h6 class="card-title">Mastering Responsive Web Design with Bootstrap</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="mb-0">By Jacqueline Miller</p>
+                                        <a class="icon-link icon-link-hover stretched-link" href="blog-single-v1.html">Read more<i class="bi bi-arrow-right"></i> </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Slider item -->
+                        <div class="swiper-slide">
+                            <article class="card bg-transparent">
+                                <!-- Image -->
+                                <img src="{% static "theme-assets/images/blog/4by3/02.jpg" %}" class="card-img" alt="blog-img">
+                                <div class="card-body px-0 pb-0">
+                                    <h6 class="card-title">Bootstrap Mastery: Designing Stunning Websites</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="mb-0">By Dennis Barrett</p>
+                                        <a class="icon-link icon-link-hover stretched-link" href="blog-single-v2.html">Read more<i class="bi bi-arrow-right"></i> </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Slider item -->
+                        <div class="swiper-slide">
+                            <article class="card bg-transparent">
+                                <!-- Image -->
+                                <img src="{% static "theme-assets/images/blog/4by3/03.jpg" %}" class="card-img" alt="blog-img">
+                                <div class="card-body px-0 pb-0">
+                                    <h6 class="card-title">Interactive Web Design with Bootstrap and Webestica</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="mb-0">By Carolyn Ortiz</p>
+                                        <a class="icon-link icon-link-hover stretched-link" href="blog-single-v1.html">Read more<i class="bi bi-arrow-right"></i> </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Slider item -->
+                        <div class="swiper-slide">
+                            <article class="card bg-transparent">
+                                <!-- Image -->
+                                <img src="{% static "theme-assets/images/blog/4by3/04.jpg" %}" class="card-img" alt="blog-img">
+                                <div class="card-body px-0 pb-0">
+                                    <h6 class="card-title">Effortless Web Development with Mizzle</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="mb-0">By Carolyn Ortiz</p>
+                                        <a class="icon-link icon-link-hover stretched-link" href="blog-single-v2.html">Read more<i class="bi bi-arrow-right"></i> </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Slider item -->
+                        <div class="swiper-slide">
+                            <article class="card bg-transparent">
+                                <!-- Image -->
+                                <img src="{% static "theme-assets/images/blog/4by3/05.jpg" %}" class="card-img" alt="blog-img">
+                                <div class="card-body px-0 pb-0">
+                                    <h6 class="card-title">Sleek and Responsive - Designing with Bootstrap and Mizzle</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p class="mb-0">By Carolyn Ortiz</p>
+                                        <a class="icon-link icon-link-hover stretched-link" href="blog-single-v1.html">Read more<i class="bi bi-arrow-right"></i> </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider END -->
+            </div>
+        </section>
+        <!-- Related blog END -->
+    </main>
+    <!-- **************** MAIN CONTENT END **************** -->
+    {% endblock Content %}
