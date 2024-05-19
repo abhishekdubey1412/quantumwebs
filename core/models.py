@@ -9,7 +9,7 @@ class Subscribe(models.Model):
     def __str__(self):
         return self.email
 
-class Reviews(models.Model):
+class Review(models.Model):
     name = models.CharField(max_length=50)
     content = models.CharField(max_length=350)
     rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
@@ -18,7 +18,7 @@ class Reviews(models.Model):
     def __str__(self):
         return self.name
 
-class Faqs(models.Model):
+class Faq(models.Model):
     question = models.CharField(max_length=250)
     answer = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)

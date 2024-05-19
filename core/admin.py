@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Subscribe, Reviews, Faqs
+from .models import Subscribe, Review, Faq
 
 @admin.register(Subscribe)
 class SubscribeAdmin(admin.ModelAdmin):
@@ -7,13 +7,13 @@ class SubscribeAdmin(admin.ModelAdmin):
     search_fields = ('email',)
     list_filter = ('subscribed_at', 'unsubscribed')
 
-@admin.register(Reviews)
+@admin.register(Review)
 class ReviewsAdmin(admin.ModelAdmin):
     list_display = ('name', 'content', 'rating', 'created_at')
     search_fields = ('name', 'content')
     list_filter = ('rating', 'created_at')
 
-@admin.register(Faqs)
+@admin.register(Faq)
 class FaqsAdmin(admin.ModelAdmin):
     list_display = ('question', 'answer', 'created_at', 'updated_at')
     search_fields = ('question', 'answer')
