@@ -33,6 +33,14 @@ class Post(models.Model):
     meta_description = models.TextField(blank=True)
     meta_keywords = models.CharField(max_length=200, blank=True)
 
+    def save(self, *args, **kwargs):
+        if not self.excerpt:
+            self.excerpt = self.content[:200]
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.title
+
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, db_index=True)
     name = models.CharField(max_length=100)
