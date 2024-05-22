@@ -10,6 +10,7 @@ urlpatterns = [
     path('faqs/', views.faqs, name='faqs'),
     path('career/', views.career, name='career'),
     path('career-single/', views.career_single, name='career-single'),
+    path('subscribe/', views.subscribe, name="subscribe")
 ]
 
 handler404 = 'core.views.custom_404_view'
