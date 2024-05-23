@@ -1,9 +1,9 @@
 from service.models import Service
 from django.contrib import messages
-from .models import Faq, Contact, Subscribe, Review
 from django.shortcuts import render, redirect
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
+from .models import Faq, Contact, Subscribe, Review, JobListing
 
 def home(request):
     try:
@@ -56,7 +56,16 @@ def career(request):
     return render(request, 'career.html')
 
 def career_single(request):
-    return render(request, 'career-single.html')
+    try:
+        career = JobListing.objects.first()
+    except JobListing.DoesNotExist:
+        career = None
+
+    context = {
+        'career': career
+    }
+
+    return render(request, 'career-single.html', context)
 
 def custom_404_view(request, exception):
     return render(request, '404.html', status=404)

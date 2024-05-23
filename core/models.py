@@ -36,3 +36,29 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+class JobListing(models.Model):
+    department = models.CharField(max_length=100)
+    industry = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    location = models.CharField(max_length=100)
+    job_type = models.CharField(max_length=50)
+    salary = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    skills = models.TextField(null=True)
+    responsibilities = models.TextField()
+    experience = models.CharField(max_length=100)
+    educational_requirements = models.CharField(max_length=200)
+    description = models.TextField()
+    
+    def __str__(self):
+        return self.title
+
+class JobApplication(models.Model):
+    applicant_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone = models.CharField(max_length=15)
+    job_profile = models.CharField(max_length=100)
+    message = models.TextField()
+
+    def __str__(self):
+        return f'{self.applicant_name} - {self.job_profile.title}'

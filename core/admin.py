@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Subscribe, Review, Faq, Contact
+from .models import Subscribe, Review, Faq, Contact, JobListing, JobApplication
 
 @admin.register(Subscribe)
 class SubscribeAdmin(admin.ModelAdmin):
@@ -23,3 +23,17 @@ class FaqsAdmin(admin.ModelAdmin):
 class ContactAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'phone', 'company')
     search_fields = ('name', 'email', 'company')
+
+@admin.register(JobListing)
+class JobListingAdmin(admin.ModelAdmin):
+    list_display = ('title', 'department', 'industry', 'location', 'job_type', 'salary')
+    list_filter = ('department', 'industry', 'job_type', 'location')
+    search_fields = ('title', 'department', 'industry', 'location', 'skills', 'experience', 'educational_requirements')
+    ordering = ('title',)
+
+@admin.register(JobApplication)
+class JobApplicationAdmin(admin.ModelAdmin):
+    list_display = ('applicant_name', 'email', 'phone', 'job_profile')
+    search_fields = ('applicant_name', 'email', 'phone', 'job_profile__title')
+    list_filter = ('job_profile',)
+    ordering = ('applicant_name',)
