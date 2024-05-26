@@ -343,18 +343,11 @@
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All jobs</button>
                             </li>
+                            {% for career in careers %}
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-development-tab" data-bs-toggle="pill" data-bs-target="#pills-development" type="button" role="tab" aria-controls="pills-development" aria-selected="false">Development</button>
+                                <button class="nav-link" id="pills-{{career.department}}-tab" data-bs-toggle="pill" data-bs-target="#pills-{{career.department}}" type="button" role="tab" aria-controls="pills-{{career.department}}" aria-selected="false">{{career.department}}</button>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-hr-tab" data-bs-toggle="pill" data-bs-target="#pills-hr" type="button" role="tab" aria-controls="pills-hr" aria-selected="false">HR</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-marketing-tab" data-bs-toggle="pill" data-bs-target="#pills-marketing" type="button" role="tab" aria-controls="pills-marketing" aria-selected="false">Marketing</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-design-tab" data-bs-toggle="pill" data-bs-target="#pills-design" type="button" role="tab" aria-controls="pills-design" aria-selected="false">Design</button>
-                            </li>
+                            {% endfor %}
                         </ul>
 
                         <!-- Tab content START -->
@@ -438,103 +431,48 @@
                                 </div>
                             </div>
 
-                            <!-- Content item -->
-                            <div class="tab-pane fade" id="pills-development" role="tabpanel" aria-labelledby="pills-development-tab" tabindex="0">
-                                <!-- Job item -->
-                                <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
-                                    <div class="mb-4 mb-md-0">
-                                        <!-- Badge -->
-                                        <div class="badge text-bg-dark mb-3">Information Technology</div>
-                                        <!-- Title -->
-                                        <h5 class="mb-0"><a href="career-single.html" class="stretched-link">UI/UX and Product Designer</a></h5>
+                            {% for career in careers %}
+                                <!-- Content item -->
+                                <div class="tab-pane fade" id="pills-{{career.department}}" role="tabpanel" aria-labelledby="pills-{{career.department}}-tab" tabindex="0">
+                                    <!-- Job item -->
+                                    <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                                        <div class="mb-4 mb-md-0">
+                                            <!-- Badge -->
+                                            <div class="badge text-bg-dark mb-3">Information Technology</div>
+                                            <!-- Title -->
+                                            <h5 class="mb-0"><a href="career-single.html" class="stretched-link">UI/UX and Product Designer</a></h5>
 
-                                        <!-- List -->
-                                        <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
-                                            <span><i class="bi bi-geo-alt me-2"></i>USA, ontario</span>
-                                            <span><i class="bi bi-clock me-2"></i>San Francisco</span>
-                                            <span><i class="bi bi-briefcase me-2"></i>$32,000</span>
+                                            <!-- List -->
+                                            <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                                <span><i class="bi bi-geo-alt me-2"></i>USA, ontario</span>
+                                                <span><i class="bi bi-clock me-2"></i>San Francisco</span>
+                                                <span><i class="bi bi-briefcase me-2"></i>$32,000</span>
+                                            </div>
                                         </div>
+                                        <!-- Button -->
+                                        <div><a href="#" class="btn btn-primary mb-0">Apply now<i class="bi bi-arrow-right ms-2"></i></a></div>
                                     </div>
-                                    <!-- Button -->
-                                    <div><a href="#" class="btn btn-primary mb-0">Apply now<i class="bi bi-arrow-right ms-2"></i></a></div>
-                                </div>
 
-                                <!-- Job item -->
-                                <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
-                                    <div class="mb-4 mb-md-0">
-                                        <!-- Badge -->
-                                        <div class="badge text-bg-dark mb-3">Business</div>
-                                        <!-- Title -->
-                                        <h5 class="mb-0"><a href="career-single.html" class="stretched-link">General Office Manager</a></h5>
+                                    <!-- Job item -->
+                                    <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                                        <div class="mb-4 mb-md-0">
+                                            <!-- Badge -->
+                                            <div class="badge text-bg-dark mb-3">Business</div>
+                                            <!-- Title -->
+                                            <h5 class="mb-0"><a href="career-single.html" class="stretched-link">General Office Manager</a></h5>
 
-                                        <!-- List -->
-                                        <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
-                                            <span><i class="bi bi-geo-alt me-2"></i>USA, New York</span>
-                                            <span><i class="bi bi-clock me-2"></i>Full time</span>
-                                            <span><i class="bi bi-briefcase me-2"></i>$41,000</span>
+                                            <!-- List -->
+                                            <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                                <span><i class="bi bi-geo-alt me-2"></i>USA, New York</span>
+                                                <span><i class="bi bi-clock me-2"></i>Full time</span>
+                                                <span><i class="bi bi-briefcase me-2"></i>$41,000</span>
+                                            </div>
                                         </div>
+                                        <!-- Button -->
+                                        <div><a href="#" class="btn btn-primary mb-0">Apply now<i class="bi bi-arrow-right ms-2"></i></a></div>
                                     </div>
-                                    <!-- Button -->
-                                    <div><a href="#" class="btn btn-primary mb-0">Apply now<i class="bi bi-arrow-right ms-2"></i></a></div>
                                 </div>
-                            </div>
-
-                            <!-- Content item -->
-                            <div class="tab-pane fade" id="pills-hr" role="tabpanel" aria-labelledby="pills-hr-tab" tabindex="0">
-                                <!-- Job item -->
-                                <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
-                                    <div class="mb-4 mb-md-0">
-                                        <!-- Badge -->
-                                        <div class="badge text-bg-dark mb-3">Software</div>
-                                        <!-- Title -->
-                                        <h5 class="mb-0"><a href="career-single.html" class="stretched-link">Machine Learning Specialist</a></h5>
-
-                                        <!-- List -->
-                                        <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
-                                            <span><i class="bi bi-geo-alt me-2"></i>Mumbai, India</span>
-                                            <span><i class="bi bi-clock me-2"></i>Full time</span>
-                                            <span><i class="bi bi-briefcase me-2"></i>$18,000</span>
-                                        </div>
-                                    </div>
-                                    <!-- Button -->
-                                    <div><a href="#" class="btn btn-primary mb-0">Apply now<i class="bi bi-arrow-right ms-2"></i></a></div>
-                                </div>
-
-                                <!-- Job item -->
-                                <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
-                                    <div class="mb-4 mb-md-0">
-                                        <!-- Badge -->
-                                        <div class="badge text-bg-dark mb-3">Information Technology</div>
-                                        <!-- Title -->
-                                        <h5 class="mb-0"><a href="career-single.html" class="stretched-link">Senior Product Manager</a></h5>
-
-                                        <!-- List -->
-                                        <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
-                                            <span><i class="bi bi-geo-alt me-2"></i>UK, London</span>
-                                            <span><i class="bi bi-clock me-2"></i>Full time</span>
-                                            <span><i class="bi bi-briefcase me-2"></i>$29,000</span>
-                                        </div>
-                                    </div>
-                                    <!-- Button -->
-                                    <div><a href="#" class="btn btn-primary mb-0">Apply now<i class="bi bi-arrow-right ms-2"></i></a></div>
-                                </div>
-                            </div>
-
-                            <!-- Content item -->
-                            <div class="tab-pane fade" id="pills-marketing" role="tabpanel" aria-labelledby="pills-marketing-tab" tabindex="0">
-                                <div class="text-center justify-content-center p-sm-4">
-                                    <span class="display-5 text-primary"><i class="bi bi-slash-circle"></i></span>
-                                    <h5 class="mb-0 mt-2 mt-sm-4">There are no job openings available for this role.</h5>
-                                </div>
-                            </div>
-
-                            <!-- Content item -->
-                            <div class="tab-pane fade" id="pills-design" role="tabpanel" aria-labelledby="pills-design-tab" tabindex="0">
-                                <div class="text-center justify-content-center p-sm-4">
-                                    <span class="display-5 text-primary"><i class="bi bi-slash-circle"></i></span>
-                                    <h5 class="mb-0 mt-2 mt-sm-4">There are no job openings available for this role.</h5>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                         <!-- Tab content END -->
                     </div>

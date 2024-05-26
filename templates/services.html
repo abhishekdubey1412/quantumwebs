@@ -49,28 +49,30 @@
         <section class="pt-0">
             <div class="container">
                 <div class="row g-4 g-lg-5">
-                    <!-- Service item -->
-                    <div class="col-md-6">
-                        <div class="card card-body card-hover-shadow border d-flex flex-row p-4 h-100">
-                            <!-- Icon -->
-                            <figure class="text-primary mb-0">
-                                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M20.2402 6.75391C21.2543 9.81065 21.2543 11.8485 20.2402 14.9052" stroke="currentColor" stroke-opacity="0.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-							<path d="M2.25047 12.9739C2.25055 14.0922 3.15715 14.9988 4.27547 14.9988V14.9988L4.25651 19.4911C4.25125 20.7361 5.25945 21.7481 6.50452 21.7474V21.7474C7.74497 21.7468 8.75021 20.741 8.75021 19.5006V15.1105H10V6.55981H6.46978C5.09959 6.55981 4.41449 6.55981 3.87962 6.79848C3.26038 7.07479 2.76505 7.57015 2.48879 8.18941C2.25016 8.72431 2.25021 9.4094 2.25031 10.7796L2.25047 12.9739Z" fill="currentColor"></path>
-							<path d="M11.0002 15.8122C13.9211 18.3111 15.3815 19.5606 16.6274 19.37C17.1377 19.2919 17.6157 19.0718 18.0068 18.7348C18.9616 17.912 18.9616 15.99 18.9616 12.146V9.4287C18.9616 5.58267 18.9616 3.65966 18.0199 2.83775C17.6138 2.48322 17.1124 2.2559 16.5781 2.18405C15.3393 2.01748 13.893 3.28476 11.0002 5.81933V5.81933V15.8122V15.8122Z" fill="currentColor" fill-opacity="0.25"></path>
-						</svg>
-                            </figure>
+                    {% for category in categories %}
+                        <!-- Service item -->
+                        <div class="col-md-6">
+                            <div class="card card-body card-hover-shadow border d-flex flex-row p-4 h-100">
+                                <!-- Icon -->
+                                <figure class="text-primary mb-0">
+                                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.2402 6.75391C21.2543 9.81065 21.2543 11.8485 20.2402 14.9052" stroke="currentColor" stroke-opacity="0.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2.25047 12.9739C2.25055 14.0922 3.15715 14.9988 4.27547 14.9988V14.9988L4.25651 19.4911C4.25125 20.7361 5.25945 21.7481 6.50452 21.7474V21.7474C7.74497 21.7468 8.75021 20.741 8.75021 19.5006V15.1105H10V6.55981H6.46978C5.09959 6.55981 4.41449 6.55981 3.87962 6.79848C3.26038 7.07479 2.76505 7.57015 2.48879 8.18941C2.25016 8.72431 2.25021 9.4094 2.25031 10.7796L2.25047 12.9739Z" fill="currentColor"></path>
+                                <path d="M11.0002 15.8122C13.9211 18.3111 15.3815 19.5606 16.6274 19.37C17.1377 19.2919 17.6157 19.0718 18.0068 18.7348C18.9616 17.912 18.9616 15.99 18.9616 12.146V9.4287C18.9616 5.58267 18.9616 3.65966 18.0199 2.83775C17.6138 2.48322 17.1124 2.2559 16.5781 2.18405C15.3393 2.01748 13.893 3.28476 11.0002 5.81933V5.81933V15.8122V15.8122Z" fill="currentColor" fill-opacity="0.25"></path>
+                            </svg>
+                                </figure>
 
-                            <!-- Title -->
-                            <div class="d-flex flex-column ms-4">
-                                <h5 class="mb-3">Digital marketing</h5>
-                                <p class="mb-3">Digital marketing is the art and science of reaching, engaging, and influencing your target audience through online channels.</p>
-                                <a class="icon-link icon-link-hover stretched-link mt-auto" href="service-single.html">Know more<i class="bi bi-arrow-right"></i> </a>
+                                <!-- Title -->
+                                <div class="d-flex flex-column ms-4">
+                                    <h5 class="mb-3">{{category.type}}</h5>
+                                    <p class="mb-3">{{category.content}}</p>
+                                    <a class="icon-link icon-link-hover stretched-link mt-auto" href="service-single.html">Know more<i class="bi bi-arrow-right"></i> </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    {% endfor %}
 
-                    <!-- Service item -->
+                    {% comment %} <!-- Service item -->
                     <div class="col-md-6">
                         <div class="card card-body card-hover-shadow border d-flex flex-row p-4 h-100">
                             <!-- Icon -->
@@ -178,7 +180,7 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> {% endcomment %}
                 </div>
             </div>
         </section>

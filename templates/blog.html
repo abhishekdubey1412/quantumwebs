@@ -20,89 +20,35 @@
 
                     <!-- Slider items -->
                     <div class="swiper-wrapper">
-                        <!-- Slider item -->
-                        <div class="swiper-slide">
-                            <!-- Card item START -->
-                            <div class="card overflow-hidden h-500px text-center rounded-0" style="background-image:url({% static "theme-assets/images/blog/01.jpg" %}); background-position: center left; background-size: cover;">
-                                <!-- Background dark overlay -->
-                                <div class="bg-overlay bg-dark opacity-5"></div>
-                                <!-- Card image overlay -->
-                                <div class="card-img-overlay d-flex align-items-center p-2 p-sm-4">
-                                    <div class="w-100 my-auto">
-                                        <div class="row justify-content-center">
-                                            <div class="col-11 col-lg-9">
-                                                <!-- Badge -->
-                                                <a href="#" class="badge text-bg-dark mb-4">Marketing</a>
-                                                <!-- Title -->
-                                                <h1 class="h2 mb-4"><a href="blog-single-v2.html" class="text-white text-primary-hover">The Evolution of Branding: Unleashing Potential</a></h1>
-                                                <ul class="nav nav-divider mb-0 justify-content-center small">
-                                                    <li class="nav-item text-white"><a href="#" class="text-decoration-underline"><i class="bi bi-person me-2"></i>Frances Guerrero</a></li>
-                                                    <li class="nav-item text-white"><i class="bi bi-calendar me-2"></i>Nov 5, 2018</li>
-                                                    <li class="nav-item text-white"><i class="bi bi-clock me-2"></i>4 min read</li>
-                                                </ul>
+                        {% for category in categories %}
+                            <!-- Slider item -->
+                            <div class="swiper-slide">
+                                <!-- Card item START -->
+                                <div class="card overflow-hidden h-500px text-center rounded-0" style="background-image:url('{{category.featured_image.url}}'); background-position: center left; background-size: cover;">
+                                    <!-- Background dark overlay -->
+                                    <div class="bg-overlay bg-dark opacity-5"></div>
+                                    <!-- Card image overlay -->
+                                    <div class="card-img-overlay d-flex align-items-center p-2 p-sm-4">
+                                        <div class="w-100 my-auto">
+                                            <div class="row justify-content-center">
+                                                <div class="col-11 col-lg-9">
+                                                    <!-- Badge -->
+                                                    <a href="{% url 'category' slug=category.slug %}" class="badge text-bg-dark mb-4">{{ category.name }}</a>
+                                                    <!-- Title -->
+                                                    <h1 class="h2 mb-4"><a href="{% url 'category' slug=category.slug %}" class="text-white text-primary-hover">{{category.title}}</a></h1>
+                                                    <ul class="nav nav-divider mb-0 justify-content-center small">
+                                                        <li class="nav-item text-white"><a href="#" class="text-decoration-underline"><i class="bi bi-person me-2"></i>Joan Wallace</a></li>
+                                                        <li class="nav-item text-white"><i class="bi bi-calendar me-2"></i>Nov 5, 2018</li>
+                                                        <li class="nav-item text-white"><i class="bi bi-clock me-2"></i>4 min read</li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Card item END -->
                             </div>
-                            <!-- Card item END -->
-                        </div>
-
-                        <!-- Slider item -->
-                        <div class="swiper-slide">
-                            <!-- Card item START -->
-                            <div class="card overflow-hidden h-500px text-center rounded-0" style="background-image:url({% static "theme-assets/images/blog/02.jpg" %}); background-position: center left; background-size: cover;">
-                                <!-- Background dark overlay -->
-                                <div class="bg-overlay bg-dark opacity-5"></div>
-                                <!-- Card image overlay -->
-                                <div class="card-img-overlay d-flex align-items-center p-2 p-sm-4">
-                                    <div class="w-100 my-auto">
-                                        <div class="row justify-content-center">
-                                            <div class="col-11 col-lg-9">
-                                                <!-- Badge -->
-                                                <a href="#" class="badge text-bg-dark mb-4">Lifestyle</a>
-                                                <!-- Title -->
-                                                <h1 class="h2 mb-4"><a href="blog-single-v1.html" class="text-white text-primary-hover">The Power of Gratitude: Cultivating Joy and Abundance</a></h1>
-                                                <ul class="nav nav-divider mb-0 justify-content-center small">
-                                                    <li class="nav-item text-white"><a href="#" class="text-decoration-underline"><i class="bi bi-person me-2"></i>Carolyn Ortiz</a></li>
-                                                    <li class="nav-item text-white"><i class="bi bi-calendar me-2"></i>Nov 5, 2018</li>
-                                                    <li class="nav-item text-white"><i class="bi bi-clock me-2"></i>4 min read</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card item END -->
-                        </div>
-
-                        <!-- Slider item -->
-                        <div class="swiper-slide">
-                            <!-- Card item START -->
-                            <div class="card overflow-hidden h-500px text-center rounded-0" style="background-image:url({% static "theme-assets/images/blog/03.jpg" %}); background-position: center left; background-size: cover;">
-                                <!-- Background dark overlay -->
-                                <div class="bg-overlay bg-dark opacity-5"></div>
-                                <!-- Card image overlay -->
-                                <div class="card-img-overlay d-flex align-items-center p-2 p-sm-4">
-                                    <div class="w-100 my-auto">
-                                        <div class="row justify-content-center">
-                                            <div class="col-11 col-lg-9">
-                                                <!-- Badge -->
-                                                <a href="#" class="badge text-bg-dark mb-4">Design</a>
-                                                <!-- Title -->
-                                                <h1 class="h2 mb-4"><a href="blog-single-v2.html" class="text-white text-primary-hover">Interactive Web Design with Bootstrap and Webestica</a></h1>
-                                                <ul class="nav nav-divider mb-0 justify-content-center small">
-                                                    <li class="nav-item text-white"><a href="#" class="text-decoration-underline"><i class="bi bi-person me-2"></i>Joan Wallace</a></li>
-                                                    <li class="nav-item text-white"><i class="bi bi-calendar me-2"></i>Nov 5, 2018</li>
-                                                    <li class="nav-item text-white"><i class="bi bi-clock me-2"></i>4 min read</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card item END -->
-                        </div>
+                        {% endfor %}
                     </div>
 
                     <!-- Slider Pagination -->

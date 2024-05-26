@@ -53,7 +53,16 @@ def faqs(request):
     return render(request, 'faqs.html', {'faqs': faqs_list})
 
 def career(request):
-    return render(request, 'career.html')
+    try:
+        careers = JobListing.objects.all()
+    except Service.DoesNotExist:
+        careers = None
+
+    context = {
+        'careers': careers
+    }
+    
+    return render(request, 'career.html', context)
 
 def career_single(request):
     try:

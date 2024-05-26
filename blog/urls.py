@@ -1,7 +1,9 @@
 from django.urls import path
-from .views import blog, BlogSingle
+from .views import blog, BlogSingle, category, tag
 
 urlpatterns = [
-    path('blog/', blog, name='blog'),
-    path('blog/<slug:slug>/', BlogSingle.as_view(), name='blog_single'),
+    path('blogs/', blog, name='blogs'),
+    path('<slug:slug>/', BlogSingle.as_view(), name='blog_single'),
+    path('category/<slug:slug>/', category, name='category'),
+    path('tag/<slug:slug>/', tag, name='tag'),
 ]
